@@ -1,0 +1,16 @@
+Hello!
+Hello, Kashan!
+getTen() = 10
+calSum(3, 4) = 7
+By value:
+  inside (by value): 10 -> 15 -> 20
+  outside after call: 10   <- unchanged (a copy was modified)
+By reference:
+  inside (by reference): 10 -> 15 -> 20
+  outside after call: 20   <- changed (the original was modified)
+after mySwap: x = 2, y = 1
+min = 1, max = 9
+vowels in 'education' = 5
+area(4) = 16, area(3, 5) = 15, area(1.0) = 3.14159
+power(5) = 25, power(2, 10) = 1024
+primes up to 20: 2 3 5 7 11 13 17 19 

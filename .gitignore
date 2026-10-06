@@ -1,0 +1,3 @@
+# Compiled binaries (rebuilt by the compile task)
+*.exe
+*.out
