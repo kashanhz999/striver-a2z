@@ -109,7 +109,7 @@ int main()
     cout << "primary diagonal sum = " << primary << ", secondary = " << secondary << "\n";
 
     // TIP: in DSA you'll mostly use  vector<vector<int>> grid(rows, vector<int>(cols, 0));
-    // because its size can be decided at runtime. (See STL/02-vector.cpp)
+    // because its size can be decided at runtime. (See 03-STL/02-vector.cpp)
 
     return 0;
 }

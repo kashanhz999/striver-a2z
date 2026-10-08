@@ -2,7 +2,7 @@
 ===============================================================================
  11 - TIME & SPACE COMPLEXITY (Big-O)
 ===============================================================================
- No input needed. Full theory is in C++/README.md (section 11).
+ No input needed. Full theory is in 01-CPP-Basics/README.md (section 11).
 
  Time complexity = how the NUMBER OF OPERATIONS grows as input size n grows.
  It is NOT the time in seconds (that depends on the machine).

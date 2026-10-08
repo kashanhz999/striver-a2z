@@ -2,7 +2,7 @@
 ===============================================================================
  PATTERN PRINTING - 22 classic patterns
 ===============================================================================
- INPUT (Patterns/input.txt): any number of lines, each line is
+ INPUT (02-Patterns/input.txt): any number of lines, each line is
          <patternNumber> <n>
        patternNumber = 1..22  -> prints that pattern
        patternNumber = 0      -> prints ALL 22 patterns for that n
@@ -11,7 +11,7 @@
        0 5        <- show every pattern with n = 5
        9 3        <- then pattern 9 with n = 3
 
- THE 4-STEP METHOD (works for every pattern - read Patterns/README.md):
+ THE 4-STEP METHOD (works for every pattern - read 02-Patterns/README.md):
    1. Outer loop = number of ROWS.
    2. Inner loop(s) = what goes in each COLUMN of a row.
    3. Find the FORMULA connecting the row number i to what is printed

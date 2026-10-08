@@ -1,0 +1,8 @@
+0 Is Not Prime  (brute agrees: yes)
+7 Is Prime  (brute agrees: yes)
+12 Is Not Prime  (brute agrees: yes)
+121 Is Not Prime  (brute agrees: yes)
+153 Is Not Prime  (brute agrees: yes)
+1634 Is Not Prime  (brute agrees: yes)
+7789 Is Prime  (brute agrees: yes)
+Primes up to 50: 2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 
