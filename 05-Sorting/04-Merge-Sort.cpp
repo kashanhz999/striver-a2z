@@ -1,70 +1,55 @@
-
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
-void Merge(int arr[], int low, int mid, int high) {
+
+void merge(vector<int>& arr, int low, int mid, int high){
     vector<int> temp;
+    int right, left;
+    right = mid+1;
+    left = low;
 
-    int left = low;
-    int right = mid + 1;
-
-    // Dono sorted halves ko merge karo
-    while (left <= mid && right <= high) {
-        if (arr[left] <= arr[right]) {
-            temp.push_back(arr[left]);
+    while(left <=mid && right <=high){
+        if(arr[left] <= arr[right]){
+            temp.emplace_back(arr[left]);
             left++;
-        } else {
-            temp.push_back(arr[right]);
+        }
+        else{
+            temp.emplace_back(arr[right]);
             right++;
         }
     }
-
-    // Left half ke remaining elements
-    while (left <= mid) {
-        temp.push_back(arr[left]);
+    while(left <= mid){
+        temp.emplace_back(arr[left]);
         left++;
     }
-
-    // Right half ke remaining elements
-    while (right <= high) {
-        temp.push_back(arr[right]);
+    while(right <=high){
+        temp.emplace_back(arr[right]);
         right++;
     }
 
-    // Temporary array ko original array mein copy karo
-    for (int i = low; i <= high; i++) {
-        arr[i] = temp[i - low];
+    for(int i=low; i<=high; i++){
+        arr[i] = temp[i-low];
     }
 }
 
-void Merge_Sort(int arr[], int low, int high) {
-    if (low >= high) return;
+void merge_sort(vector<int>& arr, int low, int high){
+    int mid;
 
-    int mid = low + (high - low) / 2;
-
-    Merge_Sort(arr, low, mid);
-    Merge_Sort(arr, mid + 1, high);
-
-    Merge(arr, low, mid, high);
+    if(low>=high) return;
+    mid = (low+high)/2;
+    merge_sort(arr, low, mid);
+    merge_sort(arr, mid+1, high);
+    merge(arr, low, mid, high);
 }
 
-int main() {
-    int n;
-    cin >> n;
+int main(){
+    vector<int> arr = {5,4,3,2,1};
+    int n = arr.size();
 
-    vector<int> arr(n);
+    merge_sort(arr, 0, n-1);
 
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
-
-    Merge_Sort(arr.data(), 0, n - 1);
-
-    for (int i = 0; i < n; i++) {
+    for(int i=0; i<n; i++){
         cout << arr[i] << " ";
     }
-
-    cout << '\n';
-
     return 0;
 }
